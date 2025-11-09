@@ -10,7 +10,7 @@ class GetStartedScreen extends StatelessWidget {
           child: Column(
         children: [
           Image.asset(""),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Text(""),
