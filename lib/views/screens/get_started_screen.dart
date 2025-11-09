@@ -5,6 +5,18 @@ class GetStartedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+          child: Column(
+        children: [
+          Image.asset(""),
+          SizedBox(
+            height: 25,
+          ),
+          Text(""),
+          Text(""),
+        ],
+      )),
+    );
   }
 }
