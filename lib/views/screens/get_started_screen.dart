@@ -13,8 +13,8 @@ class GetStartedScreen extends StatelessWidget {
           const SizedBox(
             height: 25,
           ),
-          Text(""),
-          Text(""),
+          const Text(""),
+          const Text(""),
         ],
       )),
     );
