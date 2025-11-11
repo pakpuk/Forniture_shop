@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fourniture_shop/core/text_manager.dart';
+import 'package:gap/gap.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -8,13 +10,18 @@ class GetStartedScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset("assets/images/unsplash_FkKClUPUURU.png"),
-          const SizedBox(
-            height: 25,
+          const Gap(25),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: Text(
+              TextManager.getstartedTitle,
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
           ),
-          const Text(""),
-          const Text(""),
+          const Text(TextManager.getstartedSubTitle),
         ],
       )),
     );
