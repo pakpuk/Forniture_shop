@@ -9,7 +9,7 @@ class GetStartedScreen extends StatelessWidget {
       body: SafeArea(
           child: Column(
         children: [
-          Image.asset(""),
+          Image.asset("assets/images/unsplash_FkKClUPUURU.png"),
           const SizedBox(
             height: 25,
           ),
