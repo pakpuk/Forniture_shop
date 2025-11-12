@@ -3,4 +3,5 @@ class TextManager {
   static const String getstartedSubTitle =
       'Browse through all categories and shop the bestFeatures\nfor your dream house';
   static const String getStartedTextBtn = 'Get Started';
+  static const String homeTitle = 'Discover The Best\n forniture ';
 }
