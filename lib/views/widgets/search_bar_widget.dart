@@ -33,9 +33,6 @@ class SearchBarWidget extends StatelessWidget {
               fontSize: 15,
             ),
           ),
-          Row(
-            children: [const Divider()],
-          )
         ],
       ),
     );
