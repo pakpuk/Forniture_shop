@@ -4,4 +4,5 @@ class TextManager {
       'Browse through all categories and shop the bestFeatures\nfor your dream house';
   static const String getStartedTextBtn = 'Get Started';
   static const String homeTitle = 'Discover The Best\n forniture ';
+  static const String searchBarHint = 'Search for furniture';
 }

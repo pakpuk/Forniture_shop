@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
+import 'package:fourniture_shop/core/text_manager.dart';
 
 class CustomProfileBar extends StatelessWidget {
   const CustomProfileBar({super.key});
@@ -9,15 +10,20 @@ class CustomProfileBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(data),
-        CircleAvatar(
-          radius: 22,
-          backgroundColor: ColorsManager.primayColor,
-          child: CircleAvatar(
-            radius: 20,
-            child: Image.asset(name),
+        const Text(
+          TextManager.homeTitle,
+          style: TextStyle(
+            color: ColorsManager.greenlight,
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
           ),
-        )
+        ),
+        Container(
+          height: 56,
+          width: 56,
+          decoration: const BoxDecoration(shape: BoxShape.circle),
+          child: Image.asset("assets/images/Ellipse 1.png"),
+        ),
       ],
     );
   }

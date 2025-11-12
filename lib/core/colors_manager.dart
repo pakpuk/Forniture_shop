@@ -9,4 +9,6 @@ class ColorsManager {
   static const Color primayColor = Color(0xff2C4939);
   static const Color whiteColor = Colors.white;
   static const Color blackColor = Colors.black;
+  static const Color greenlight = Color(0xff416954);
+  static const Color greycolor = Colors.grey;
 }
