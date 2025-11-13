@@ -5,4 +5,5 @@ class TextManager {
   static const String getStartedTextBtn = 'Get Started';
   static const String homeTitle = 'Discover The Best\n forniture ';
   static const String searchBarHint = 'Search for furniture';
+  static const String categoriesTxt = 'Categories';
 }

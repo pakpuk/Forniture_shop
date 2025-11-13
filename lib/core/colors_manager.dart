@@ -11,4 +11,5 @@ class ColorsManager {
   static const Color blackColor = Colors.black;
   static const Color greenlight = Color(0xff416954);
   static const Color greycolor = Colors.grey;
+  static const Color productContainerColor = Color(0xffE3E3E39C);
 }
