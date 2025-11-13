@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
 import 'package:fourniture_shop/views/widgets/custom_profile_bar.dart';
+import 'package:fourniture_shop/views/widgets/search_bar_widget.dart';
 import 'package:gap/gap.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const CustomProfileBar(),
               const Gap(25),
+              SearchBarWidget(),
             ],
           ),
         ),
