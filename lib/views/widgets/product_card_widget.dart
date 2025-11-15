@@ -21,16 +21,37 @@ class MyWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 color: ColorsManager.productContainerColor),
             child: Center(
-              child: Image.asset(
-                "assets/images/c7d2674006d4e14181d44a5ffd4a714b-removebg-preview 2.png",
-                fit: BoxFit.cover,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  "assets/images/c7d2674006d4e14181d44a5ffd4a714b-removebg-preview 2.png",
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
           const Gap(10),
           Text(
             "Modern chair",
-            style: TextStyle(),
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const Gap(8),
+          Text(
+            "Armchair",
+            style: TextStyle(
+              color: ColorsManager.greyTextColor,
+              fontSize: 12,
+            ),
+          ),
+          const Gap(10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(" \$ 12500"),
+            ],
           )
         ],
       ),
