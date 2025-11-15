@@ -3,8 +3,8 @@ import 'package:fourniture_shop/core/colors_manager.dart';
 import 'package:fourniture_shop/views/widgets/add_button_componant.dart';
 import 'package:gap/gap.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class ProductCardWidget extends StatelessWidget {
+  const ProductCardWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

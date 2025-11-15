@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
+import 'package:fourniture_shop/views/widgets/categories_box.dart';
 import 'package:fourniture_shop/views/widgets/custom_profile_bar.dart';
+import 'package:fourniture_shop/views/widgets/product_card_widget.dart';
 import 'package:fourniture_shop/views/widgets/search_bar_widget.dart';
 import 'package:gap/gap.dart';
 
@@ -26,6 +29,25 @@ class _HomeScreenState extends State<HomeScreen> {
               const CustomProfileBar(),
               const Gap(25),
               SearchBarWidget(),
+              const Gap(25),
+              ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return const CategoriesBoxWidget(
+                      backgroundColor: ColorsManager.primayColor,
+                      textColor: ColorsManager.whiteColor,
+                    );
+                  }),
+              const Gap(25),
+              ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return const ProductCardWidget();
+                  }),
             ],
           ),
         ),

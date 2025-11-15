@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
 import 'package:fourniture_shop/core/text_manager.dart';
 import 'package:fourniture_shop/views/screens/home_screen.dart';
@@ -19,24 +20,24 @@ class GetStartedScreen extends StatelessWidget {
           Image.asset("assets/images/unsplash_FkKClUPUURU.png"),
           const Gap(25),
           Padding(
-            padding: const EdgeInsets.only(left: 15),
+            padding: EdgeInsets.only(left: 15.w),
             child: Text(
               TextManager.getstartedTitle,
               style: GoogleFonts.inter(
-                  textStyle: const TextStyle(
-                      fontSize: 26,
+                  textStyle: TextStyle(
+                      fontSize: 26.sp,
                       fontWeight: FontWeight.bold,
                       color: ColorsManager.mainTextColor)),
             ),
           ),
           const Gap(10),
           Padding(
-            padding: const EdgeInsets.only(left: 15),
+            padding: EdgeInsets.only(left: 15.w),
             child: Text(
               TextManager.getstartedSubTitle,
               style: GoogleFonts.inter(
-                  textStyle: const TextStyle(
-                fontSize: 13,
+                  textStyle: TextStyle(
+                fontSize: 13.sp,
                 color: ColorsManager.mainTextColor,
               )),
             ),
