@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
+import 'package:fourniture_shop/views/widgets/add_button_componant.dart';
 import 'package:gap/gap.dart';
 
 class MyWidget extends StatelessWidget {
@@ -8,8 +9,8 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 30),
+      decoration: const BoxDecoration(
         color: ColorsManager.whiteColor,
         borderRadius: BorderRadius.all(Radius.circular(22)),
       ),
@@ -49,9 +50,7 @@ class MyWidget extends StatelessWidget {
           const Gap(10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(" \$ 12500"),
-            ],
+            children: [Text(" \$ 12500"), AddButtonComponant(ontap: () {})],
           )
         ],
       ),
