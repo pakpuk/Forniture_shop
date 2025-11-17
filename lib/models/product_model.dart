@@ -1,3 +1,5 @@
+import 'package:fourniture_shop/models/category_model.dart';
+
 class ProductModel {
   final String imagePath;
   final String productName;
@@ -12,3 +14,25 @@ class ProductModel {
       required this.price,
       required this.productImages});
 }
+
+List<ProductModel> productItem = [
+  ProductModel(
+      imagePath:
+          'assets/images/c7d2674006d4e14181d44a5ffd4a714b-removebg-preview 1 (1).png',
+      productName: 'Minimalist Chair',
+      categoryName: '',
+      price: 'price',
+      productImages: []),
+  ProductModel(
+      imagePath: 'imagePath',
+      productName: 'productName',
+      categoryName: 'categoryName',
+      price: 'price',
+      productImages: []),
+  ProductModel(
+      imagePath: 'imagePath',
+      productName: 'productName',
+      categoryName: 'categoryName',
+      price: 'price',
+      productImages: ['productImages']),
+];

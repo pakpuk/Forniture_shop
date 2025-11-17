@@ -4,4 +4,9 @@ class CategoryModel {
   CategoryModel({required this.categroyName});
 }
 
-List<CategoryModel> categoryList = [];
+List<CategoryModel> categoryList = [
+  CategoryModel(categroyName: 'Chairs'),
+  CategoryModel(categroyName: 'Tables'),
+  CategoryModel(categroyName: 'Lamps'),
+  CategoryModel(categroyName: 'Cupboard'),
+];
