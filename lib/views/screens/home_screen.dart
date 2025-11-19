@@ -18,9 +18,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    int selectedIndex = 0;
     return Scaffold(
       backgroundColor: ColorsManager.whiteColor,
       body: SafeArea(
@@ -59,13 +59,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: categoryList.length),
               ),
               const Gap(25),
-              ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return const ProductCardWidget();
-                  }),
+              SizedBox(
+                height: 300.h,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return const ProductCardWidget();
+                    }),
+              ),
             ],
           ),
         ),
