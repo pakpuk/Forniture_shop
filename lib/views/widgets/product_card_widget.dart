@@ -37,6 +37,7 @@ class _ProductCardWidgetState extends State<ProductCardWidget>
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0, end: 1),
       duration: const Duration(milliseconds: 600),
+      curve: Curves.easeOut,
       builder: (BuildContext context, double value, Widget? child) {},
       child: GestureDetector(
         child: Container(
