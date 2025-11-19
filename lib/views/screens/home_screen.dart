@@ -20,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    bool isSelected = false;
+    int selectedIndex = 0;
     return Scaffold(
       backgroundColor: ColorsManager.whiteColor,
       body: SafeArea(
@@ -39,9 +39,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (builder, index) {
+                      bool isSelected = index == selectedIndex;
                       return CategoriesBoxWidget(
-                        backgroundColor: categoryList[index].isSelected,
-                        textColor: textColor,
+                        ontap: () {
+                          setState(() {
+                            selectedIndex = index;
+                          });
+                        },
+                        backgroundColor: isSelected
+                            ? ColorsManager.primayColor
+                            : Colors.grey[200]!,
+                        textColor: isSelected
+                            ? ColorsManager.whiteColor
+                            : ColorsManager.mainTextColor,
                         categoryName: categoryList[index].categroyName,
                       );
                     },
