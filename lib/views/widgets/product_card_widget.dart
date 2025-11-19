@@ -12,6 +12,13 @@ class ProductCardWidget extends StatefulWidget {
 
 class _ProductCardWidgetState extends State<ProductCardWidget>
     with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
