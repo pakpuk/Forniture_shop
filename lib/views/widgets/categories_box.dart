@@ -3,9 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CategoriesBoxWidget extends StatelessWidget {
   const CategoriesBoxWidget(
-      {super.key, required this.backgroundColor, required this.textColor});
+      {super.key,
+      required this.backgroundColor,
+      required this.textColor,
+      required this.categoryName});
   final Color backgroundColor;
   final Color textColor;
+  final String categoryName;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +21,7 @@ class CategoriesBoxWidget extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          "Categorie",
+          categoryName,
           style: TextStyle(color: textColor),
         ),
       ),
