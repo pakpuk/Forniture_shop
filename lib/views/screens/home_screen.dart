@@ -20,6 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    bool isSelected = false;
     return Scaffold(
       backgroundColor: ColorsManager.whiteColor,
       body: SafeArea(
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const CustomProfileBar(),
               const Gap(25),
-              SearchBarWidget(),
+              const SearchBarWidget(),
               const Gap(25),
               SizedBox(
                 height: 60.h,
@@ -39,8 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (builder, index) {
                       return CategoriesBoxWidget(
-                          backgroundColor: backgroundColor,
-                          textColor: textColor);
+                        backgroundColor: categoryList[index].isSelected,
+                        textColor: textColor,
+                        categoryName: categoryList[index].categroyName,
+                      );
                     },
                     separatorBuilder: (context, index) => const Gap(12),
                     itemCount: categoryList.length),
