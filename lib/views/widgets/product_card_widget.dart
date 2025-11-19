@@ -3,9 +3,15 @@ import 'package:fourniture_shop/core/colors_manager.dart';
 import 'package:fourniture_shop/views/widgets/add_button_componant.dart';
 import 'package:gap/gap.dart';
 
-class ProductCardWidget extends StatelessWidget {
+class ProductCardWidget extends StatefulWidget {
   const ProductCardWidget({super.key});
 
+  @override
+  State<ProductCardWidget> createState() => _ProductCardWidgetState();
+}
+
+class _ProductCardWidgetState extends State<ProductCardWidget>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
