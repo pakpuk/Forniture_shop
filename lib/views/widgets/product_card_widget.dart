@@ -34,51 +34,59 @@ class _ProductCardWidgetState extends State<ProductCardWidget>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 30),
-      decoration: const BoxDecoration(
-        color: ColorsManager.whiteColor,
-        borderRadius: BorderRadius.all(Radius.circular(22)),
-      ),
-      child: Column(
-        children: [
-          Container(
-            // padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: ColorsManager.productContainerColor),
-            child: Center(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  "assets/images/c7d2674006d4e14181d44a5ffd4a714b-removebg-preview 2.png",
-                  fit: BoxFit.cover,
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(milliseconds: 600),
+      builder: (BuildContext context, double value, Widget? child) {},
+      child: GestureDetector(
+        child: Container(
+          padding:
+              const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 30),
+          decoration: const BoxDecoration(
+            color: ColorsManager.whiteColor,
+            borderRadius: BorderRadius.all(Radius.circular(22)),
+          ),
+          child: Column(
+            children: [
+              Container(
+                // padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: ColorsManager.productContainerColor),
+                child: Center(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      "assets/images/c7d2674006d4e14181d44a5ffd4a714b-removebg-preview 2.png",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
-            ),
+              const Gap(10),
+              Text(
+                "Modern chair",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const Gap(8),
+              Text(
+                "Armchair",
+                style: TextStyle(
+                  color: ColorsManager.greyTextColor,
+                  fontSize: 12,
+                ),
+              ),
+              const Gap(10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" \$ 12500"), AddButtonComponant(ontap: () {})],
+              )
+            ],
           ),
-          const Gap(10),
-          Text(
-            "Modern chair",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          const Gap(8),
-          Text(
-            "Armchair",
-            style: TextStyle(
-              color: ColorsManager.greyTextColor,
-              fontSize: 12,
-            ),
-          ),
-          const Gap(10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text(" \$ 12500"), AddButtonComponant(ontap: () {})],
-          )
-        ],
+        ),
       ),
     );
   }
