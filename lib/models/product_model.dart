@@ -1,5 +1,3 @@
-import 'package:fourniture_shop/models/category_model.dart';
-
 class ProductModel {
   final String imagePath;
   final String productName;
