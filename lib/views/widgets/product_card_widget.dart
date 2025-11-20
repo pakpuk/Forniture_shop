@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
+import 'package:fourniture_shop/models/product_model.dart';
 import 'package:fourniture_shop/views/widgets/add_button_componant.dart';
 import 'package:gap/gap.dart';
 
 class ProductCardWidget extends StatefulWidget {
-  const ProductCardWidget({super.key});
-
+  const ProductCardWidget({super.key, required this.productItem});
+  final ProductModel productItem;
   @override
   State<ProductCardWidget> createState() => _ProductCardWidgetState();
 }
