@@ -66,7 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: 5,
                     itemBuilder: (context, index) {
-                      return const ProductCardWidget();
+                      return const ProductCardWidget(
+                        productItem: null,
+                      );
                     }),
               ),
             ],

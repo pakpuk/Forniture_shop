@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fourniture_shop/core/colors_manager.dart';
 import 'package:fourniture_shop/models/product_model.dart';
 import 'package:fourniture_shop/views/widgets/add_button_componant.dart';
@@ -72,7 +73,7 @@ class _ProductCardWidgetState extends State<ProductCardWidget>
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        productItem.i,
+                        widget.productItem.imagePath,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -80,25 +81,25 @@ class _ProductCardWidgetState extends State<ProductCardWidget>
                 ),
                 const Gap(10),
                 Text(
-                  "Modern chair",
+                  widget.productItem.productName,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 const Gap(8),
                 Text(
-                  "Armchair",
+                  widget.productItem.categoryName,
                   style: TextStyle(
                     color: ColorsManager.greyTextColor,
-                    fontSize: 12,
+                    fontSize: 12.sp,
                   ),
                 ),
                 const Gap(10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(" \$ 12500"),
+                    Text("\$ + ${widget.productItem.price}"),
                     AddButtonComponant(ontap: () {})
                   ],
                 )
