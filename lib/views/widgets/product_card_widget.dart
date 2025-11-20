@@ -72,7 +72,7 @@ class _ProductCardWidgetState extends State<ProductCardWidget>
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        "assets/images/c7d2674006d4e14181d44a5ffd4a714b-removebg-preview 2.png",
+                        productItem.i,
                         fit: BoxFit.cover,
                       ),
                     ),
